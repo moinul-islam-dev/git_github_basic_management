@@ -8,7 +8,7 @@ const Navbar = () => {
     const [isActiveLink, setIsActiveLink] = useState<string>("Home");
 
     return (
-        <header className="navbar bg-base-100 shadow-sm px-4 lg:px-8">
+        <header className="font-inter navbar bg-base-100 shadow-sm px-4 lg:px-8">
             {/* Navbar Start: Mobile Dropdown & Logo */}
             <div className="navbar-start">
                 <div className="dropdown">

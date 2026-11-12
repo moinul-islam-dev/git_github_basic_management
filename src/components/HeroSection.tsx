@@ -2,7 +2,7 @@ import hero from "../assets/hero.png";
 
 const HeroSection = () => {
     return (
-        <section className="w-full px-6 md:px-20 py-14 md:py-18 flex flex-col md:flex-row items-center justify-between gap-12">
+        <section className="font-inter w-full px-6 md:px-20 py-14 md:py-18 flex flex-col md:flex-row items-center justify-between gap-12">
             {/* left side */}
             <div className="w-full md:w-1/2 space-y-6">
                 <h1 className="text-4xl sm:text-5xl lg:text-[54px] font-extrabold tracking-tight text-[#0F172A] leading-[1.15]">
