@@ -1,10 +1,14 @@
+import { useState } from "react";
 import logo from "../assets/logo.png"
 
 const navLinks = ["Home", "Technologies", "Projects", "About", "Contact"];
 
 const Navbar = () => {
+
+    const [isActiveLink, setIsActiveLink] = useState<string>("Home");
+
     return (
-        <div className="navbar bg-base-100 shadow-sm px-4 lg:px-8">
+        <header className="navbar bg-base-100 shadow-sm px-4 lg:px-8">
             {/* Navbar Start: Mobile Dropdown & Logo */}
             <div className="navbar-start">
                 <div className="dropdown">
@@ -31,7 +35,7 @@ const Navbar = () => {
                     >
                         {navLinks.map((link, index) => (
                             <li key={index}>
-                                <a href="#" className="hover:text-pink-600 font-medium">
+                                <a onClick={() => setIsActiveLink(link)} href="#" className={`font-medium ${isActiveLink === link ? "text-pink-600" : "text-gray-600 hover:text-pink-600"}`}>
                                     {link}
                                 </a>
                             </li>
@@ -54,7 +58,8 @@ const Navbar = () => {
                         <li key={index}>
                             <a
                                 href="#"
-                                className={`font-medium ${link === "Home" ? "text-pink-600" : "text-gray-600 hover:text-pink-600"}`}
+                                onClick={() => setIsActiveLink(link)}
+                                className={`font-medium ${isActiveLink === link ? "text-pink-600" : "text-gray-600 hover:text-pink-600"}`}
                             >
                                 {link}
                             </a>
@@ -72,7 +77,7 @@ const Navbar = () => {
                     Sign Up
                 </a>
             </div>
-        </div>
+        </header>
     )
 };
 
